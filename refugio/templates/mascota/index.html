@@ -1,0 +1,103 @@
+{% extends 'base/base.html' %}
+
+{% block title %}App Mascota{% endblock %}
+
+{% block header %}
+<h4 class="text-center mt-5">Este es el Bloque del Header Index de la App Mascota</h4>
+{% endblock %}
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% block content %}
+<div class="container-fluid">
+    <h2>Mascotas</h2>
+
+    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi architecto tenetur et consequuntur, non quis animi officiis, tempore cupiditate iste, sed totam iusto nostrum explicabo corrupti odio corporis nam! Consequuntur!</h5>
+
+    <section>
+        <h3>Título</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia nisi in cumque ipsa nam inventore praesentium nostrum consequatur. Facilis quae iste reiciendis autem dicta ullam iure praesentium ipsam necessitatibus deserunt?</p>
+    </section>
+
+    <table class="table table-hover">
+            <thead>
+            <tr>
+                <th scope="col">Type</th>
+                <th scope="col">Column heading</th>
+                <th scope="col">Column heading</th>
+                <th scope="col">Column heading</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="table-active">
+                <th scope="row">Active</th>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+            </tr>
+            <tr>
+                <th scope="row">Default</th>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+            </tr>
+            <tr class="table-primary">
+                <th scope="row">Primary</th>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+            </tr>
+            <tr class="table-secondary">
+                <th scope="row">Secondary</th>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+            </tr>
+            <tr class="table-success">
+                <th scope="row">Success</th>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+            </tr>
+            <tr class="table-danger">
+                <th scope="row">Danger</th>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+            </tr>
+            <tr class="table-warning">
+                <th scope="row">Warning</th>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+            </tr>
+            <tr class="table-info">
+                <th scope="row">Info</th>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+            </tr>
+            <tr class="table-light">
+                <th scope="row">Light</th>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+            </tr>
+            <tr class="table-dark">
+                <th scope="row">Dark</th>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+            </tr>
+            </tbody>
+    </table>
+</div>
+{% endblock%}
+
+{% block footer %}
+<h5>Soy el Footer del Base</h5>
+{% endblock%}
