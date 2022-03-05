@@ -1,0 +1,43 @@
+{% extends 'base/base.html' %}
+
+
+{% block header %}
+<div class="container-fluid">
+    <h4 class="text-center">Listado de Registros</h4>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <td>#</td>
+                <td>Nombre</td>
+                <td>Sexo</td>
+                <td>Edad</td>
+                <td>Fecha de Rescate</td>
+                <td>Adoptante</td>
+                <!-- <td>Vacunas</td> -->
+            </tr>
+        </thead>
+        <tbody>
+            {% if mascotas %}
+            {% for mascota in mascotas %}
+                <tr class="table-active">
+                    <th scope="row">{{ mascota.id }}</th>
+                    <td>{{ mascota.nombre }}</td>
+                    <td>{{ mascota.sexo }}</td>
+                    <td>{{ mascota.edad_aproximada }}</td>
+                    <td>{{ mascota.fecha_rescate }}</td>
+                    <td>{{ mascota.persona.nombre }} {{ mascota.persona.apellido }}</td>
+                    <!-- <td>{{ mascota.vacuna.nombre }}</td> -->
+                </tr>
+            {% endfor %}
+            {% else %}
+                <h1>No Existen Registros de Mascotas</h1>
+            {% endif %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
