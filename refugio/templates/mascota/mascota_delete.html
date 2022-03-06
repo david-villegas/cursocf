@@ -1,0 +1,19 @@
+{% extends 'base/base.html' %}
+
+
+{% block header %}
+<div class="container-fluid">
+    <h4>Eliminar registros</h4>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <form method="post">
+        {% csrf_token %}
+        <h3>¿Desea eliminar el registro de {{ mascota.nombre }}?</h3>
+        <button type="submit" class="btn btn-outline-primary">Aceptar</button>
+        <a class="btn btn-outline-danger" href="{% url 'mascota:mascota_listar' %}">Cancelar</a>
+    </form>
+</div>
+{% endblock %}
