@@ -3,6 +3,8 @@ from django.http import HttpResponse
 from django.urls import reverse_lazy
 from django.views.generic import ListView,CreateView,UpdateView,DeleteView
 # from django.views import generic
+# from django.contrib import messages
+from django.contrib.messages.views import SuccessMessageMixin
 
 from apps.mascota.forms import MascotaForm
 from apps.mascota.models import Mascota
@@ -49,19 +51,23 @@ class MascotaList(ListView):
     template_name = 'mascota/mascota_list.html'
     ordering = ['id']
 
-class MascotaCreate(CreateView):
+class MascotaCreate(SuccessMessageMixin, CreateView):
     model = Mascota
     form_class = MascotaForm
     template_name = 'mascota/mascota_form.html'
     success_url = reverse_lazy('mascota:mascota_listar')
+    success_message = 'Registro creado Satisfactoriamente.'
 
-class MascotaUpdate(UpdateView):
+class MascotaUpdate(SuccessMessageMixin, UpdateView):
     model = Mascota
     form_class = MascotaForm
     template_name = 'mascota/mascota_form.html'
     success_url = reverse_lazy('mascota:mascota_listar')
+    success_message = 'Registro actualizado Satisfactoriamente.'
 
-class MascotaDelete(DeleteView):
+
+class MascotaDelete(SuccessMessageMixin, DeleteView):
     model = Mascota
     template_name = 'mascota/mascota_delete.html'
     success_url = reverse_lazy('mascota:mascota_listar')
+    success_message = 'Registro Eliminado Satisfactoriamente.'
