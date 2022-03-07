@@ -4,10 +4,8 @@ from django.urls import path
 from . import views
 
 app_name = 'adopcion'
-# urlpatterns = [
-#     path('', index),
-# ]
-
 urlpatterns = [
     path('', views.index, name='index'),
+    path('solicitud/listar',views.SolicitudList.as_view(), name='solicitud_listar'),
+    path('solicitud/nueva',views.SolicitudCreate.as_view(), name='solicitud_crear'),
 ]

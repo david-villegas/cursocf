@@ -1,6 +1,3 @@
-from cProfile import label
-from dataclasses import fields
-from tkinter import Widget
 from django import forms
 
 from apps.mascota.models import Mascota
@@ -30,5 +27,5 @@ class MascotaForm(forms.ModelForm):
             'edad_aproximada' : forms.TextInput(attrs={'class':'form-control'}),
             'fecha_rescate' : forms.TextInput(attrs={'class':'form-control'}),
             'persona' : forms.Select(attrs={'class':'form-control'}),
-            'vacuna' : forms.CheckboxSelectMultiple (),
+            'vacuna' : forms.CheckboxSelectMultiple(),
         }
