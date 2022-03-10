@@ -11,7 +11,7 @@
 <div class="container-fluid">
     <form method="post">
         {% csrf_token %}
-        <h3>¿Desea eliminar el registro de {{ object.nombre }}?</h3>
+        <h3>¿Desea eliminar el registro de {{ object.persona.nombre }} {{ object.persona.apellido }}?</h3>
         <button type="submit" class="btn btn-outline-primary">Aceptar</button>
         <a class="btn btn-outline-danger" href="{% url 'adopcion:solicitud_listar' %}">Cancelar</a>
     </form>

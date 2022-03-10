@@ -28,8 +28,8 @@
                     <td>{{ solicitud.numero_mascotas }}</td>
                     <td>{{ solicitud.razones }}</td>
                     <td>
-                        <a class="btn btn-outline-success" href="#">Editar</a>
-                        <a class="btn btn-outline-danger" href="#">Eliminar</a>
+                        <a class="btn btn-outline-success" href="{% url 'adopcion:solicitud_editar' solicitud.id %}">Editar</a>
+                        <a class="btn btn-outline-danger" href="{% url 'adopcion:solicitud_eliminar' solicitud.id %}">Eliminar</a>
                     </td>
                 </tr>
             {% endfor %}
