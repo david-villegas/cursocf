@@ -19,9 +19,9 @@ class RegistroForm(UserCreationForm):
             'last_name': 'Apellido',
             'email': 'Correo Electrónico',
         }
-        widgets = {
-            'username' : forms.TextInput(attrs={'class':'form-control'}),
-            'first_name' : forms.TextInput(attrs={'class':'form-control'}),
-            'last_name' : forms.TextInput(attrs={'class':'form-control'}),
-            'email' : forms.TextInput(attrs={'class':'form-control'}),
-        }
+        # widgets = {
+        #     'username' : forms.TextInput(attrs={'class':'form-control'}),
+        #     'first_name' : forms.TextInput(attrs={'class':'form-control'}),
+        #     'last_name' : forms.TextInput(attrs={'class':'form-control'}),
+        #     'email' : forms.TextInput(attrs={'class':'form-control'}),
+        # }

@@ -142,3 +142,10 @@ MESSAGE_TAGS = {
  }
 
 LOGIN_REDIRECT_URL = reverse_lazy('adopcion:solicitud_listar')
+
+EMAIL_USE_TLS = False
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = 'info@franmajo.com'
+EMAIL_HOST_PASSWORD = 'info123456'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
