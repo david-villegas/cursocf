@@ -36,6 +36,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'apps.adopcion.apps.AdopcionConfig',
     'apps.mascota.apps.MascotaConfig',
+    'apps.usuario.apps.UsuarioConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
