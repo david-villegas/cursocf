@@ -57,7 +57,7 @@ class MascotaList(ListView):
     model = Mascota
     template_name = 'mascota/mascota_list.html'
     ordering = ['id']
-    paginate_by = 2
+    paginate_by = 4
 
 class MascotaCreate(SuccessMessageMixin, CreateView):
     model = Mascota
