@@ -142,6 +142,7 @@ MESSAGE_TAGS = {
  }
 
 LOGIN_REDIRECT_URL = reverse_lazy('adopcion:solicitud_listar')
+LOGOUT_REDIRECT_URL = reverse_lazy('login')
 
 EMAIL_USE_TLS = False
 EMAIL_HOST = 'localhost'

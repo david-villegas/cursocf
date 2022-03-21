@@ -16,14 +16,15 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
-from django.contrib.auth.views import LoginView, PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView
+from django.contrib.auth.views import LoginView, LogoutView, PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('mascota/', include('apps.mascota.urls')),
     path('adopcion/', include('apps.adopcion.urls')),
     path('usuario/', include('apps.usuario.urls')),
-    path('', LoginView.as_view(template_name='usuario/index.html'), name='login'),
+    path('accounts/login/', LoginView.as_view(template_name='usuario/index.html'), name='login'),
+    path('logout/', LogoutView.as_view(template_name='usuario/index.html'), name='logout'),
     path('reset/password_reset', PasswordResetView.as_view(template_name='registration/password_reset_form.html', email_template_name='registration/password_reset_email.html'), name='password_reset'),
     path('reset/password_reset_done', PasswordResetDoneView.as_view(template_name='registration/password_reset_done.html'), name='password_reset_done'),
     path('reset/<uidb64>/<token>/', PasswordResetConfirmView.as_view(template_name='registration/password_reset_confirm.html'), name='password_reset_confirm'),
