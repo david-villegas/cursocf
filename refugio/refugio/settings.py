@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'apps.adopcion.apps.AdopcionConfig',
     'apps.mascota.apps.MascotaConfig',
     'apps.usuario.apps.UsuarioConfig',
+    'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -150,3 +151,9 @@ EMAIL_PORT = 25
 EMAIL_HOST_USER = 'info@franmajo.com'
 EMAIL_HOST_PASSWORD = 'info123456'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+
+}
